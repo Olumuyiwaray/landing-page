@@ -1,0 +1,13 @@
+* {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.stbn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#copy {
+    font-size: 12px;
+}
+
