@@ -16,6 +16,53 @@
     <script src="https://kit.fontawesome.com/c9e868ff59.js" crossorigin="anonymous"></script>
     <title>Landing page</title>
 </head>
+<style>
+    .mySlides {
+  display: none;
+}
+    @media (min-width: 992px) {
+      .welcome_heading {
+        font-size: 4rem; /* Adjust the font size for large screens as needed */
+      }
+      .welcome_para{
+        font-size: 1.8rem
+      }
+      .welcome_img{
+        height: 500px;
+      }
+      .explain_img {
+        height: 300px;
+        width: 300px;
+      }
+      .explain_text {
+        font-size: 1.2rem;
+      }
+      .explain_heading {
+        font-size: 2.5rem;
+      }
+      .delivery_text {
+        font-size: 2.3rem;
+      }
+      .delivery_box {
+        border: none;
+        border-radius: 10px;
+      }
+      .mySlides {
+  display: block;
+}
+.SME_text {
+    font-size: 2.5rem;
+}
+.store_pic {
+    height: 200px;
+    width: 200px;
+    }
+    .phone {
+        height: 500px;
+        width: 250px
+    }
+}
+</style>
 <body>
         <!--Nav Bar-->
 
@@ -46,83 +93,83 @@
 </nav>
     <!--Welcome section-->
 <div class="container-fluid">
-    <div class="row bg-light p-5">
-        <div class="col-sm-6 h-25 w-50">
-            <h1 class="display-3 fw-bolder text-center">We connect you to thousands of logistics service providers near you</h1>
-            <p class="h3 text-center">our aim is to democratize logistics, and make it seemless for all parties involved</p>
+    <div class="bg-light p-5 row d-block d-lg-flex">
+        <div class="col-lg-6 h-lg-25 w-lg-50">
+            <h1 class="welcome_heading display-3 fw-bolder text-center">We connect you to thousands of logistics service providers near you</h1>
+            <p class="welcome_para h5 text-center">our aim is to democratize logistics, and make it seemless for all parties involved</p>
         </div>
-        <div class="col-sm-6 h-50 w-50">
-            <img class="float-end" src="assets/hero-mockup.3afbd050.png" alt="Phone" height="500">
-        </div>
-    </div>
-
-    <div class="row p-5">
-        <div class="col-sm-6 w-50 text-center">
-            <img class="mx-auto" src="assets/clock.svg" alt="clock" height="300" width="300">
-        </div>
-        <div class="col-sm-6 stbn">
-            <h1 class="display-6 fw-bold text-center">Time bound inclusion</h1>
-            <p class="h5">Set a deadline for package delivery as a vendor. If we fail to meet-up, we will refund you your cost. That's a promise!</p>
+        <div class="col-lg-6 h-lg-50 w-lg-50 mt-5">
+            <img class="welcome_img float-lg-end" src="assets/hero-mockup.3afbd050.png" alt="Phone" height="300">
         </div>
     </div>
 
-    <div class="row p-5">
-        <div class="col-sm-6 p-4 stbn">
-            <h1 class="display-6 fw-bold text-center">Real-Time tracking</h1>
-            <p class="h5">It's your package. You deserve to know where it is at every point in time until its delivered.</p>
+    <div class="p-5 row d-block d-lg-flex">
+        <div class="text-center col-lg-6 ">
+            <img class="explain_img mx-auto" src="assets/clock.svg" alt="clock" height="200" width="200">
         </div>
-        <div class="col-sm-6 w-50 text-center">
-            <img src="assets/vehicle.svg" alt="vehicle" height="300" width="300">
+        <div class="stbn text-center col-lg-6">
+            <h1 class="h5 explain_heading fw-bold">Time bound inclusion</h1>
+            <p class="h6 explain_text">Set a deadline for package delivery as a vendor. If we fail to meet-up, we will refund you your cost. That's a promise!</p>
         </div>
     </div>
 
-    <div class="row p-5">
-        <div class="col-sm-6 w-50 text-center">
-          <img src="assets/box.svg" alt="box" height="300" width="300">
+    <div class="p-5 row d-block d-lg-flex lg-flex-row-reverse">
+        <div class="text-center col-lg-6 order-lg-2">
+            <img class="explain_img mx-auto" src="assets/vehicle.svg" alt="vehicle" height="200" width="200">
         </div>
-        <div class="col-sm-6 stbn">
-            <h1 class="display-6 fw-bold text-center">Decentralization</h1>
-            <p class="h5"> Connect with freelancers, vehicle owners, local dispatchers. Let them compete to get your packages delivered for you.</p>
+        <div class="p-4 stbn text-center col-lg-6 order-lg-1">
+            <h1 class="explain_heading h5 fw-bold">Real-Time tracking</h1>
+            <p class="h6 explain_text">It's your package. You deserve to know where it is at every point in time until its delivered.</p>
+        </div>
+    </div>
+
+    <div class="p-5 row d-block d-lg-flex">
+        <div class="text-center col-lg-6">
+          <img class="explain_img mx-auto" src="assets/box.svg" alt="box" height="200" width="200">
+        </div>
+        <div class="stbn text-center col-lg-6">
+            <h1 class="explain_heading h5 fw-bold">Decentralization</h1>
+            <p class="h6 explain_text"> Connect with freelancers, vehicle owners, local dispatchers. Let them compete to get your packages delivered for you.</p>
         </div>
     </div>
 </div>
 
 <!--info section-->
 
-<div class="container bg-info p-5 rounded-4 mb-5">
-    <h1 class="display-6 fw-bold text-center mb-5">Choose your delivery mode</h1>
-    <div class="d-flex justify-content-around">
-        <div>
-            <img src="assets/self_carry.png" alt="human" width="100" height="100">
+<div class="container delivery_box bg-info p-5 mb-5">
+    <h1 class="delivery_text h5 fw-bold text-center mb-5">Choose your delivery mode</h1>
+        <div class="slideshow-container d-lg-flex justify-content-around">
+            <div class="mySlides">
+                <img src="assets/self_carry.png" class="mx-auto d-block" alt="human" width="100" height="100">
+            </div>
+            <div class="mySlides">
+                <img src="assets/cycle.png" class="mx-auto d-block" alt="human" width="100" height="100">
+            </div>
+            <div class="mySlides">
+                <img src="assets/bike.png" class="mx-auto d-block" alt="human" width="100" height="100">
+            </div>
+            <div class="mySlides">
+                <img src="assets/car.png" class="mx-auto d-block" alt="human" width="100" height="100">
+            </div>
+            <div class="mySlides">
+                <img src="assets/truck.png" class="mx-auto d-block" alt="human" width="100" height="100">
+            </div>
         </div>
-        <div>
-            <img src="assets/cycle.png" alt="human" width="100" height="100">
-        </div>
-        <div>
-            <img src="assets/bike.png" alt="human" width="100" height="100">
-        </div>
-        <div>
-            <img src="assets/car.png" alt="human" width="100" height="100">
-        </div>
-        <div>
-            <img src="assets/truck.png" alt="human" width="100" height="100">
-        </div>
-    </div>
 </div>
 
 <!--Mid section-->
 
-<div class="container-fluid bg-warning p-5 mt-5">
+<div class="container-fluid bg-warning p-5 text-center mt-5">
     <div class="row">
         <div class="col-sm-6 stbn">
-            <p class="h1 fw-light">We are onboarding businesses, vendors and SME's for a delightful delivery experience</p> 
+            <p class="SME_text h6 fw-light">We are onboarding businesses, vendors and SME's for a delightful delivery experience</p> 
             <div class="d-flex justify-content-around">
-                <img src="assets/googlestore.14605d2b.svg" alt="google store" height="200" width="200">
-                <img src="assets/applestore.e65ab783.svg" alt="apple store" height="200" width="200">
+                <img class="store_pic" src="assets/googlestore.14605d2b.svg" alt="google store" height="150" width="150">
+                <img class="store_pic" src="assets/applestore.e65ab783.svg" alt="apple store" height="150" width="150">
             </div>         
         </div>
         <div class="col-sm-6">
-            <img class="float-end" src="assets/phone.png" alt="phone" height="500" width="250">
+            <img class="phone float-center" src="assets/phone.png" alt="phone" height="400" width="250">
         </div>
     </div>
 </div>
@@ -133,7 +180,7 @@
     <div class="container">
         <div class="border-bottom border-white">
             <a href="" class="navbar-brand">
-                <h1 class="display-3">
+                <h1 class="display-4">
                     Logo
                 </h1>
             </a>
@@ -173,5 +220,7 @@
 
 </div>
    
+
+<script src="index.js"></script>
 </body>
 </html>
