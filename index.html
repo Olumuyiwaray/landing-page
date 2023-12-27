@@ -17,9 +17,7 @@
     <title>Landing page</title>
 </head>
 <style>
-    .mySlides {
-  display: none;
-}
+
 .ml-10 {
     left: 10px;
 }
@@ -64,7 +62,11 @@ animation-name: example;
  @media (min-width: 768px) {
           .mySlides {
   display: block;
+  
 }
+#phone_container {
+        position: static !important;
+    }
     }
     @media (min-width: 992px) {
       .welcome_heading {
@@ -131,8 +133,9 @@ animation-name: example;
         margin-top: 0 !important;
         z-index: -1;
     }
-    #phone_container {
-        position: static !important;
+   
+    .slideshow-container {
+        display: flex;
     }
 
 }
@@ -219,7 +222,7 @@ animation-name: example;
             <div class="mySlides">
                 <img src="assets/cycle.png" class="mx-auto d-block" alt="human" width="100" height="100">
             </div>
-            <div class="mySlides">
+            <div class="mySlides d-hidden">
                 <img src="assets/bike.png" class="mx-auto d-block" alt="human" width="100" height="100">
             </div>
             <div class="mySlides">
@@ -234,15 +237,15 @@ animation-name: example;
 <!--Mid section-->
 
 <div id="mid_section" class="container-fluid bg-warning p-5 text-center overflow-hidden mt-5 position-relative">
-    <div id="store__div" class="row mt-md-5">
-        <div class="col-sm-6 stbn mb-10">
+    <div id="store__div" class="row d-block mt-md-5 d-md-flex">
+        <div class="col-md-6 stbn mb-10">
             <p class="SME_text h6 fw-light">We are onboarding businesses, vendors and SME's for a delightful delivery experience</p> 
             <div class="d-flex justify-content-around">
                 <img class="store_pic" src="assets/googlestore.14605d2b.svg" alt="google store" height="150" width="150">
                 <img class="store_pic" src="assets/applestore.e65ab783.svg" alt="apple store" height="150" width="150">
             </div>         
         </div>
-        <div id="phone_container" class="col-sm-6 mt-md-5 position-absolute mt-10 ml-10">
+        <div id="phone_container" class="col-md-6 mt-md-5 position-absolute mt-10 ml-10">
             <img class="phone float-center float-lg-end" src="assets/phone.png" alt="phone" height="500" width="250">
         </div>
     </div>

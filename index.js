@@ -1,5 +1,4 @@
 let slideIndex = 0;
-showSlides();
 
 function showSlides() {
     const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -15,16 +14,15 @@ function showSlides() {
         setTimeout(showSlides, 2000); // Change image every 2 seconds   
   }
 }
+showSlides();
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Add the 'loaded' class to trigger the transition on page load
-});
 
 function handleScroll() {
   var animatedElement = document.getElementById('phone_container');
   var elementPosition = animatedElement.getBoundingClientRect().top;
+  const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-  if (elementPosition < window.innerHeight / 1.5) {
+  if (elementPosition < window.innerHeight / 1.5 && screenWidth < 768) {
     animatedElement.classList.add('phone_container');
   }
 }
@@ -33,3 +31,8 @@ window.addEventListener('scroll', handleScroll);
 
 // Trigger the handleScroll function on page load (in case the element is already in view)
 document.addEventListener('DOMContentLoaded', handleScroll);
+
+
+// Trigger the handleScroll function on page load (in case the element is already in view)
+
+window.addEventListener('scroll', handleS);
