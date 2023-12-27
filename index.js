@@ -16,3 +16,20 @@ function showSlides() {
   }
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Add the 'loaded' class to trigger the transition on page load
+});
+
+function handleScroll() {
+  var animatedElement = document.getElementById('phone_container');
+  var elementPosition = animatedElement.getBoundingClientRect().top;
+
+  if (elementPosition < window.innerHeight / 1.5) {
+    animatedElement.classList.add('phone_container');
+  }
+}
+
+window.addEventListener('scroll', handleScroll);
+
+// Trigger the handleScroll function on page load (in case the element is already in view)
+document.addEventListener('DOMContentLoaded', handleScroll);

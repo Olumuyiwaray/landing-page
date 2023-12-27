@@ -20,6 +20,28 @@
     .mySlides {
   display: none;
 }
+.ml-10 {
+    left: 10px;
+}
+.mt-10 {
+    top: 350px;
+}
+.mb-10 {
+    margin-bottom: 100px !important;
+}
+
+@keyframes example {
+  from {top: 350px; display: none;}
+  to {top: 200px; display: inline-block;}
+}
+.phone_container {
+animation-name: example;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  
+}
+
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -51,8 +73,24 @@
       .welcome_para{
         font-size: 1.8rem
       }
-      .welcome_img{
-        height: 500px;
+    @keyframes heroSlide {
+  from {
+    margin-top: 100px;
+    opacity: 0;
+    }
+  to {
+    margin-top: 0; 
+    opacity: 1;
+}
+}
+
+     .welcome_img{
+    height: 500px;
+    margin-top: 100px;
+    opacity: 0;
+    animation-name: heroSlide;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
       }
       .explain_img {
         height: 300px;
@@ -70,6 +108,10 @@
       .delivery_box {
         border: none;
         border-radius: 10px;
+        position: relative;
+        top: 80px !important;
+        margin-bottom: 0 !important;
+        z-index: 1;
       }
       .mySlides {
   display: block;
@@ -85,6 +127,14 @@
         height: 500px;
         width: 250px
     }
+    #mid_section {
+        margin-top: 0 !important;
+        z-index: -1;
+    }
+    #phone_container {
+        position: static !important;
+    }
+
 }
 </style>
 <body>
@@ -160,7 +210,7 @@
 
 <!--info section-->
 
-<div id="info section" class="container delivery_box bg-info p-5 mb-5">
+<div id="info section" class="container delivery_box bg-info px-4 pt-4 pb-5 mb-5">
     <h1 class="delivery_text h5 fw-bold text-center mb-5">Choose your delivery mode</h1>
         <div class="slideshow-container d-md-flex justify-content-around">
             <div class="mySlides">
@@ -183,16 +233,16 @@
 
 <!--Mid section-->
 
-<div id="mid section" class="container-fluid bg-warning p-5 text-center mt-5">
-    <div class="row">
-        <div class="col-sm-6 stbn">
+<div id="mid_section" class="container-fluid bg-warning p-5 text-center overflow-hidden mt-5 position-relative">
+    <div id="store__div" class="row mt-md-5">
+        <div class="col-sm-6 stbn mb-10">
             <p class="SME_text h6 fw-light">We are onboarding businesses, vendors and SME's for a delightful delivery experience</p> 
             <div class="d-flex justify-content-around">
                 <img class="store_pic" src="assets/googlestore.14605d2b.svg" alt="google store" height="150" width="150">
                 <img class="store_pic" src="assets/applestore.e65ab783.svg" alt="apple store" height="150" width="150">
             </div>         
         </div>
-        <div class="col-sm-6">
+        <div id="phone_container" class="col-sm-6 mt-md-5 position-absolute mt-10 ml-10">
             <img class="phone float-center float-lg-end" src="assets/phone.png" alt="phone" height="500" width="250">
         </div>
     </div>
