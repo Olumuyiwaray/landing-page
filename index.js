@@ -3,7 +3,7 @@ showSlides();
 
 function showSlides() {
     const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    if (screenWidth < 992) {
+    if (screenWidth < 768) {
         let i;
         let slides = document.getElementsByClassName("mySlides");
         for (i = 0; i < slides.length; i++) {
@@ -15,3 +15,4 @@ function showSlides() {
         setTimeout(showSlides, 2000); // Change image every 2 seconds   
   }
 }
+
